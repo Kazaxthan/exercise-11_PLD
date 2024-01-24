@@ -2,14 +2,22 @@
 #For example, If the given int is 7536, the output shall be “6 3 5 7“, with a space separating the digits.
 
 def reverse_digits(number):
-    # Convert the number to a string and reverse it
+    # convert the number to string
     reversed_str = str(number)[::-1]
 
-    # Print each digit with a space separating them
+    #  digit with a space separating them
     for digit in reversed_str:
         print(digit, end=" ")
 
-num = 7536
+# get user input
+user_input = input("Enter an integer: ")
+
+try:
+    # swith the input to integers 
+    num = int(user_input)
+except ValueError:
+    print("Invalid input. Please enter a valid integer.")
+    exit()
 
 # Extract and print each digit in reverse order
 print("Digits in reverse order:")
